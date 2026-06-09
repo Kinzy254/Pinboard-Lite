@@ -44,7 +44,7 @@ class Database:
         with _lock:
             self._conn.executescript("""
                 CREATE TABLE IF NOT EXISTS clips (
-                    id           INTEGER PRIMARY KEY AUTOINCREMENT,
+                    id           INTEGER PRIMARY KEY,
                     type         TEXT NOT NULL DEFAULT 'text',
                     content      TEXT NOT NULL DEFAULT '',
                     html_content TEXT,
